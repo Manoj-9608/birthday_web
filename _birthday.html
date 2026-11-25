@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#20172f">
+<title>For Chandana ♡</title>
+<style>
+  :root { --night:#20172f; --purple:#55406c; --lav:#d9c8f0; --cream:#fff2df; --pink:#f2c6d5; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; color:var(--cream); font-family: "Trebuchet MS", system-ui, sans-serif;
+    background:radial-gradient(ellipse at 15% 10%, #55406c 0, transparent 35%),
+               radial-gradient(ellipse at 85% 70%, #3b2a55 0, transparent 40%), var(--night);
+    overflow-x:hidden;
+  }
+  .stars { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0; }
+  .star { position:absolute; color:#fff4d5; opacity:.75; animation:twinkle 3s ease-in-out infinite alternate; }
+  @keyframes twinkle { from{opacity:.25;transform:scale(.8)} to{opacity:.9;transform:scale(1.15)} }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+  .wrap { position:relative; z-index:1; width:min(920px, 92%); margin:auto; }
+  header { min-height:94vh; display:grid; place-items:center; text-align:center; padding:70px 0 50px; }
+  .eyebrow { letter-spacing:.22em; text-transform:uppercase; font-size:.75rem; color:#d9c8f0; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-weight:400; font-size:clamp(3.4rem, 12vw, 7rem); line-height:.95; margin:22px 0; }
+  h1 span { color:var(--pink); font-style:italic; }
+  .sub { max-width:560px; margin:0 auto 28px; line-height:1.8; color:#e7dced; font-size:1.05rem; }
+  .button { border:1px solid #e9d8f8; border-radius:999px; padding:14px 24px; color:#251a35; background:linear-gradient(120deg,#f6d5e1,#e5d5fb); font-weight:700; cursor:pointer; box-shadow:0 8px 30px #0003; transition:transform .2s, box-shadow .2s; }
+  .button:hover { transform:translateY(-3px); box-shadow:0 12px 34px #0005; }
+  .moon { font-size:2.2rem; animation:float 4s ease-in-out infinite; display:block; margin-bottom:15px; }
+  section { padding:55px 0; animation:fadeUp .8s ease both; }
+  .section-title { font-family:Georgia,serif; font-weight:400; font-size:clamp(2rem,6vw,3rem); text-align:center; margin:0 0 28px; }
+  .section-title em { color:var(--pink); }
+  .desk { display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:center; }
+  .illustration { min-height:260px; border:1px solid #ffffff25; border-radius:28px; background:linear-gradient(145deg,#4d3b61,#2b203e); display:grid; place-items:center; text-align:center; padding:25px; box-shadow:0 20px 50px #0002; }
+  .desk-art { font-size:clamp(3rem,9vw,5.4rem); line-height:1.4; filter:drop-shadow(0 10px 12px #0003); }
+  .caption { color:#e2d4ee; line-height:1.8; font-size:.95rem; }
+  .note { background:#fff0d8; color:#43324b; border-radius:8px 8px 18px 8px; padding:25px; transform:rotate(-1deg); box-shadow:0 12px 30px #0002; }
+  .note h3 { font-family:Georgia,serif; font-size:1.5rem; font-weight:400; margin:0 0 12px; }
+  .note p { line-height:1.8; margin:0; }
+  .dreams { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  .dream { border:1px solid #ffffff25; background:#ffffff0b; border-radius:18px; padding:20px; text-align:center; }
+  .dream .emoji { font-size:1.8rem; }
+  .dream h3 { margin:10px 0 6px; font-size:1rem; }
+  .dream p { margin:0; color:#d8c9e4; font-size:.9rem; line-height:1.6; }
+  .letter { max-width:690px; margin:auto; background:#fff1dc; color:#48354d; padding:clamp(24px,6vw,45px); border-radius:20px; box-shadow:0 20px 60px #0003; }
+  .letter .hello { font-family:Georgia,serif; font-size:1.65rem; font-style:italic; }
+  .letter p { line-height:1.9; }
+  .reveal { text-align:center; padding:30px 0 90px; }
+  #surprise { display:none; max-width:620px; margin:25px auto 0; line-height:1.9; font-family:Georgia,serif; font-size:1.35rem; color:#f7d9e5; animation:fadeUp .7s ease both; }
+  #surprise.show { display:block; }
+  footer { text-align:center; color:#bdaecc; padding:0 0 35px; font-size:.85rem; }
+  .heart { color:#f2c6d5; }
+  @media(max-width:650px) { .desk{grid-template-columns:1fr} .illustration{min-height:220px} .dreams{grid-template-columns:1fr 1fr} section{padding:38px 0} }
+  @media(prefers-reduced-motion:reduce) { *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important} }
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true" id="stars"></div>
+<div class="wrap">
+  <header id="top">
+    <div>
+      <span class="moon">☾</span>
+      <div class="eyebrow">A little birthday surprise</div>
+      <h1>Happy Birthday,<br><span>Chandana</span> ♡</h1>
+      <p class="sub">For a girl with big dreams, a soft heart, and a whole universe of possibilities.</p>
+      <button class="button" onclick="document.getElementById('little-world').scrollIntoView({behavior:'smooth'})">Come into your little world ✨</button>
+    </div>
+  </header>
+
+  <section id="little-world">
+    <h2 class="section-title">Your own little <em>universe</em></h2>
+    <div class="desk">
+      <div class="illustration">
+        <div>
+          <div class="desk-art">📚 💻 🌻<br>🐈‍⬛ ☕ 🌙</div>
+          <div class="caption">A cozy corner for a dreamer who keeps going.</div>
+        </div>
+      </div>
+      <div class="note">
+        <h3>Dear Chandana,</h3>
+        <p>May your days be filled with little joys, kind people, peaceful nights, and the courage to chase every big dream on your list.</p>
+        <p style="margin-top:12px">Keep being curious. Keep being wonderfully you. ♡</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">A few dreams for your <em>future</em></h2>
+    <div class="dreams">
+      <div class="dream"><div class="emoji">💻</div><h3>Big achievements</h3><p>Great placements, meaningful work, and a future you're proud of.</p></div>
+      <div class="dream"><div class="emoji">✈️</div><h3>World to explore</h3><p>Beautiful places, new cultures, and unforgettable adventures.</p></div>
+      <div class="dream"><div class="emoji">🧠</div><h3>Always learning</h3><p>New skills, brave ideas, and all the things you'll create.</p></div>
+      <div class="dream"><div class="emoji">🌙</div><h3>Quiet happiness</h3><p>Peace of mind, good health, and a life that feels like yours.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">A birthday <em>letter</em> ♡</h2>
+    <div class="letter">
+      <div class="hello">To the girl who dreams big,</div>
+      <p>Here's a little reminder on your birthday: you don't have to have everything figured out to be doing beautifully. Every small step counts, even the ones nobody sees.</p>
+      <p>I hope this new year of your life gives you more reasons to smile than to overthink, more moments of peace than pressure, and people who appreciate the soft, thoughtful person you are.</p>
+      <p>May you get closer to your dreams without losing the little things that make you happy along the way.</p>
+      <p><strong>Keep dreaming. Keep growing. Keep shining in your own way.</strong></p>
+      <p style="margin-bottom:0">With warm wishes and a little stardust,<br><span class="heart">♡ Someone wishing you a wonderful year ♡</span></p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <button class="button" id="revealBtn" onclick="revealMessage()">One last thing… 💌</button>
+    <div id="surprise">
+      Never forget: the world needs your bright mind, your gentle heart, and the unique way you see things.<br><br>
+      <strong>Happy Birthday, Chandana! 🌷</strong><br>
+      May this be the beginning of a year full of beautiful surprises.
+    </div>
+  </section>
+  <footer>Made with a little thought, a lot of good wishes, and ♡</footer>
+</div>
+<script>
+  const starField = document.getElementById('stars');
+  for (let i = 0; i < 55; i++) {
+    const s = document.createElement('span');
+    s.className = 'star';
+    s.textContent = Math.random() > .55 ? '✦' : '·';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.fontSize = (Math.random() * 12 + 7) + 'px';
+    s.style.animationDelay = (Math.random() * 4) + 's';
+    starField.appendChild(s);
+  }
+  function revealMessage() {
+    document.getElementById('surprise').classList.add('show');
+    document.getElementById('revealBtn').textContent = 'A little wish just for you ♡';
+    document.getElementById('revealBtn').disabled = true;
+  }
+</script>
+</body>
+</html>
